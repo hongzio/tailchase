@@ -1,0 +1,21 @@
+[tools]
+go = "1.27.3"
+
+[env]
+GOCACHE = "{{config_root}}/.cache/go-build"
+GOMODCACHE = "{{config_root}}/.cache/go-mod"
+
+[tasks.build]
+run = "go build -trimpath -o bin/tailchase ./cmd/tailchase"
+
+[tasks.test]
+run = "go test -race ./..."
+
+[tasks.check]
+run = "go vet ./..."
+
+[tasks.fmt]
+run = "gofmt -w cmd internal"
+
+[tasks.dev]
+run = "go run ./cmd/tailchase"
