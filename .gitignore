@@ -1,3 +1,19 @@
 /bin/
 /.cache/
 /dist/
+
+# Local development notes and private runtime data.
+/.docs/
+/.tailchase/
+/config.json
+/runtime.json
+/daemon.log
+
+# Credentials and private key exports.
+.env
+.env.*
+*.private.json
+*.pem
+*.key
+*.p12
+*.pfx

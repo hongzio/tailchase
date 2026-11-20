@@ -15,7 +15,10 @@ run = "go test -race ./..."
 run = "go vet ./..."
 
 [tasks.fmt]
-run = "gofmt -w cmd internal"
+run = "gofmt -w cmd internal packaging/release"
 
 [tasks.dev]
 run = "go run ./cmd/tailchase"
+
+[tasks.release]
+run = "go run ./packaging/release"
